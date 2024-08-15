@@ -1,0 +1,721 @@
+microbe_level,diet_type,wt
+axenic,control,3.60727999
+axenic,control,2.86284031
+axenic,control,2.954434804
+axenic,control,3.539630256
+axenic,control,2.845418324
+axenic,control,3.405118925
+axenic,control,3.503678079
+axenic,control,3.118073567
+axenic,control,3.131822694
+axenic,control,3.100565382
+axenic,control,3.249295041
+axenic,control,3.556300397
+axenic,control,3.382399182
+axenic,control,3.194344172
+axenic,control,4.169002279
+axenic,control,4.098153676
+axenic,control,3.212459648
+axenic,control,4.046084649
+axenic,control,3.013729278
+axenic,control,3.937702554
+axenic,control,3.560767826
+axenic,control,3.237077152
+axenic,control,3.708404248
+axenic,control,3.023009492
+axenic,control,4.003173554
+axenic,control,3.907993807
+axenic,control,3.239356087
+axenic,control,3.370102247
+axenic,control,2.681322902
+axenic,control,3.033250887
+axenic,control,3.96892111
+axenic,control,3.837478154
+axenic,control,3.532425902
+axenic,control,3.338942323
+axenic,control,3.555012139
+axenic,control,3.777512174
+axenic,control,2.913506288
+axenic,control,3.462234899
+axenic,control,3.499156764
+axenic,control,3.158257351
+axenic,control,4.420276778
+axenic,control,3.937613025
+axenic,control,3.683493722
+axenic,control,3.463143869
+axenic,control,3.842219969
+axenic,control,2.769321045
+axenic,control,3.513478008
+axenic,control,3.319691514
+axenic,control,3.34696443
+axenic,control,3.913785134
+axenic,control,3.823009064
+axenic,control,3.466111908
+axenic,control,3.752641676
+axenic,control,3.968147527
+axenic,control,2.896399137
+axenic,control,2.725901523
+axenic,control,3.755219304
+axenic,control,3.200467781
+axenic,control,2.635752412
+axenic,control,3.498665978
+axenic,benzoic,3.749915738
+axenic,benzoic,3.793858619
+axenic,benzoic,3.129863863
+axenic,benzoic,3.132710793
+axenic,benzoic,4.002287683
+axenic,benzoic,3.800026687
+axenic,benzoic,3.326496423
+axenic,benzoic,3.82189726
+axenic,benzoic,3.61594706
+axenic,benzoic,3.405655633
+axenic,benzoic,4.283632121
+axenic,benzoic,4.106896664
+axenic,benzoic,3.297571709
+axenic,benzoic,2.821907942
+axenic,benzoic,3.207620109
+axenic,benzoic,3.510388391
+axenic,benzoic,3.720322019
+axenic,benzoic,3.54581418
+axenic,benzoic,3.231876749
+axenic,benzoic,3.366903523
+axenic,benzoic,4.032604174
+axenic,benzoic,3.205354228
+axenic,benzoic,3.207478598
+axenic,benzoic,3.594865618
+axenic,benzoic,3.489334906
+axenic,benzoic,3.44565514
+axenic,benzoic,3.600197329
+axenic,benzoic,3.843639745
+axenic,benzoic,2.820487205
+axenic,benzoic,3.375082793
+axenic,benzoic,3.339590002
+axenic,benzoic,3.255311666
+axenic,benzoic,3.233708171
+axenic,benzoic,3.961735146
+axenic,benzoic,3.442175294
+axenic,benzoic,3.466458098
+axenic,benzoic,3.414568573
+axenic,benzoic,3.379372499
+axenic,benzoic,3.57306912
+axenic,benzoic,3.272574702
+axenic,benzoic,3.429425337
+axenic,benzoic,3.497236764
+axenic,benzoic,3.367630429
+axenic,benzoic,3.143146983
+axenic,benzoic,3.293130711
+axenic,benzoic,3.56039886
+axenic,benzoic,3.226896237
+axenic,benzoic,3.476186352
+axenic,benzoic,3.17199458
+axenic,benzoic,3.205182513
+axenic,benzoic,3.281955449
+axenic,benzoic,2.718797402
+axenic,benzoic,3.382037476
+axenic,benzoic,3.591814601
+axenic,benzoic,3.234031744
+axenic,benzoic,3.137326523
+axenic,benzoic,3.061085562
+axenic,benzoic,3.136806843
+axenic,benzoic,3.258558609
+axenic,benzoic,3.3329123
+axenic,salicylic,3.833509905
+axenic,salicylic,3.939180952
+axenic,salicylic,3.696079291
+axenic,salicylic,3.527094955
+axenic,salicylic,3.1973702
+axenic,salicylic,2.875483639
+axenic,salicylic,3.149605478
+axenic,salicylic,3.155798667
+axenic,salicylic,3.68848819
+axenic,salicylic,3.411336631
+axenic,salicylic,3.795984938
+axenic,salicylic,3.530065377
+axenic,salicylic,3.300042758
+axenic,salicylic,3.617243547
+axenic,salicylic,3.697841943
+axenic,salicylic,3.159178606
+axenic,salicylic,3.565904395
+axenic,salicylic,2.790724576
+axenic,salicylic,3.139877947
+axenic,salicylic,3.726904672
+axenic,salicylic,3.504842086
+axenic,salicylic,3.929956176
+axenic,salicylic,3.784447408
+axenic,salicylic,3.722949292
+axenic,salicylic,5.25862466
+axenic,salicylic,3.135267532
+axenic,salicylic,3.628402086
+axenic,salicylic,3.681810527
+axenic,salicylic,4.123358263
+axenic,salicylic,3.45666578
+axenic,salicylic,3.646764289
+axenic,salicylic,3.975800893
+axenic,salicylic,3.604380059
+axenic,salicylic,5.440303545
+axenic,salicylic,3.781303737
+axenic,salicylic,3.63321365
+axenic,salicylic,3.38753476
+axenic,salicylic,3.09951446
+axenic,salicylic,3.305767035
+axenic,salicylic,3.352488574
+axenic,salicylic,3.491459548
+axenic,salicylic,3.27568373
+axenic,salicylic,3.457276397
+axenic,salicylic,6.350162769
+axenic,salicylic,3.299814462
+axenic,salicylic,4.013551747
+axenic,salicylic,3.511232169
+axenic,salicylic,3.331891818
+axenic,salicylic,3.223259476
+axenic,salicylic,3.490101006
+axenic,salicylic,3.244445599
+axenic,salicylic,3.857040275
+axenic,salicylic,3.170876032
+axenic,salicylic,3.724365197
+axenic,salicylic,3.958152532
+axenic,salicylic,3.824639131
+axenic,salicylic,3.576246815
+axenic,salicylic,3.600483113
+axenic,salicylic,2.959021412
+axenic,salicylic,3.555315932
+axenic,indole,3.190230477
+axenic,indole,3.656012324
+axenic,indole,2.716009235
+axenic,indole,3.131440938
+axenic,indole,3.915361098
+axenic,indole,3.152108586
+axenic,indole,3.310301865
+axenic,indole,3.420455051
+axenic,indole,3.54333189
+axenic,indole,3.6609473
+axenic,indole,3.444177798
+axenic,indole,2.971021519
+axenic,indole,3.886077899
+axenic,indole,3.615972378
+axenic,indole,3.269246903
+axenic,indole,3.534717433
+axenic,indole,3.15466443
+axenic,indole,3.667650781
+axenic,indole,3.539148433
+axenic,indole,3.385118312
+axenic,indole,3.623796882
+axenic,indole,3.250851859
+axenic,indole,2.596253575
+axenic,indole,3.893398624
+axenic,indole,3.762331031
+axenic,indole,3.220630536
+axenic,indole,3.93493287
+axenic,indole,3.810075753
+axenic,indole,3.427371504
+axenic,indole,2.684532209
+axenic,indole,3.687428572
+axenic,indole,3.544568116
+axenic,indole,3.537650199
+axenic,indole,3.17981686
+axenic,indole,3.872477813
+axenic,indole,3.66052585
+axenic,indole,4.981072139
+axenic,indole,3.586723097
+axenic,indole,3.515949533
+axenic,indole,3.427637132
+axenic,indole,2.97711032
+axenic,indole,3.500430373
+axenic,indole,3.572842133
+axenic,indole,3.475829146
+axenic,indole,3.280932583
+axenic,indole,3.246837296
+axenic,indole,3.072232006
+axenic,indole,3.308963934
+axenic,indole,3.573993663
+axenic,indole,3.506106152
+axenic,indole,3.055801132
+axenic,indole,3.27035801
+axenic,indole,3.041165011
+axenic,indole,3.044027624
+axenic,indole,3.834999125
+axenic,indole,3.522927178
+axenic,indole,3.405589054
+axenic,indole,3.357545642
+axenic,indole,3.292578296
+axenic,indole,3.391545537
+E. mundtii,control,3.549131642
+E. mundtii,control,3.765445208
+E. mundtii,control,4.461008322
+E. mundtii,control,3.58381857
+E. mundtii,control,4.394706898
+E. mundtii,control,2.931186685
+E. mundtii,control,3.713752793
+E. mundtii,control,3.649666421
+E. mundtii,control,3.298128543
+E. mundtii,control,3.645763596
+E. mundtii,control,3.467161249
+E. mundtii,control,4.800719296
+E. mundtii,control,3.348600285
+E. mundtii,control,3.698061641
+E. mundtii,control,3.617292215
+E. mundtii,control,3.411676216
+E. mundtii,control,3.826631879
+E. mundtii,control,5.808211611
+E. mundtii,control,3.382903043
+E. mundtii,control,3.51384786
+E. mundtii,control,3.95715659
+E. mundtii,control,3.742194788
+E. mundtii,control,3.860366172
+E. mundtii,control,3.574337775
+E. mundtii,control,3.364576611
+E. mundtii,control,3.688143837
+E. mundtii,control,3.519399017
+E. mundtii,control,3.580998329
+E. mundtii,control,3.686368194
+E. mundtii,control,3.64855715
+E. mundtii,control,3.62120784
+E. mundtii,control,3.530773125
+E. mundtii,control,3.797668363
+E. mundtii,control,4.437086725
+E. mundtii,control,4.36945188
+E. mundtii,control,3.830214001
+E. mundtii,control,3.930885544
+E. mundtii,control,4.27125824
+E. mundtii,control,3.838108421
+E. mundtii,control,3.889421455
+E. mundtii,control,6.422146994
+E. mundtii,control,3.800948481
+E. mundtii,control,3.940478912
+E. mundtii,control,4.476333973
+E. mundtii,control,4.132245769
+E. mundtii,control,3.668184821
+E. mundtii,control,3.866893766
+E. mundtii,control,4.417277896
+E. mundtii,control,4.674185864
+E. mundtii,control,4.550599117
+E. mundtii,control,3.800762058
+E. mundtii,control,3.72919951
+E. mundtii,control,3.555917893
+E. mundtii,control,3.606366833
+E. mundtii,control,3.666007069
+E. mundtii,control,3.809539248
+E. mundtii,control,4.026126653
+E. mundtii,control,3.60898856
+E. mundtii,control,3.793107649
+E. mundtii,control,3.991856059
+E. mundtii,benzoic,3.405547589
+E. mundtii,benzoic,3.399587553
+E. mundtii,benzoic,3.223064066
+E. mundtii,benzoic,3.285825195
+E. mundtii,benzoic,3.04333229
+E. mundtii,benzoic,3.235354519
+E. mundtii,benzoic,3.554904894
+E. mundtii,benzoic,3.424554854
+E. mundtii,benzoic,3.231193206
+E. mundtii,benzoic,3.420679417
+E. mundtii,benzoic,3.288779733
+E. mundtii,benzoic,3.272086146
+E. mundtii,benzoic,2.787248921
+E. mundtii,benzoic,2.966980745
+E. mundtii,benzoic,3.816331728
+E. mundtii,benzoic,3.344436335
+E. mundtii,benzoic,3.429278096
+E. mundtii,benzoic,3.304422376
+E. mundtii,benzoic,3.126386439
+E. mundtii,benzoic,3.417629832
+E. mundtii,benzoic,3.187518177
+E. mundtii,benzoic,3.734236353
+E. mundtii,benzoic,3.478503011
+E. mundtii,benzoic,3.05622134
+E. mundtii,benzoic,3.27023816
+E. mundtii,benzoic,3.515990156
+E. mundtii,benzoic,4.336627996
+E. mundtii,benzoic,4.621648369
+E. mundtii,benzoic,3.346491138
+E. mundtii,benzoic,2.975467589
+E. mundtii,benzoic,3.628981543
+E. mundtii,benzoic,3.400461147
+E. mundtii,benzoic,4.098543321
+E. mundtii,benzoic,3.358407526
+E. mundtii,benzoic,3.742961177
+E. mundtii,benzoic,3.39984989
+E. mundtii,benzoic,3.099080819
+E. mundtii,benzoic,4.392341104
+E. mundtii,benzoic,2.824897309
+E. mundtii,benzoic,3.771996649
+E. mundtii,benzoic,3.807183512
+E. mundtii,benzoic,4.473575632
+E. mundtii,benzoic,3.62830406
+E. mundtii,benzoic,3.496601344
+E. mundtii,benzoic,3.362087854
+E. mundtii,benzoic,3.620532593
+E. mundtii,benzoic,3.122224324
+E. mundtii,benzoic,3.590967498
+E. mundtii,benzoic,3.182456538
+E. mundtii,benzoic,3.452502107
+E. mundtii,benzoic,2.974985406
+E. mundtii,benzoic,3.670659955
+E. mundtii,benzoic,3.555402807
+E. mundtii,benzoic,3.469679728
+E. mundtii,benzoic,3.369320182
+E. mundtii,benzoic,3.406967449
+E. mundtii,benzoic,3.504046169
+E. mundtii,benzoic,3.294798728
+E. mundtii,benzoic,3.620743581
+E. mundtii,benzoic,3.390977335
+E. mundtii,salicylic,3.428238606
+E. mundtii,salicylic,3.370157005
+E. mundtii,salicylic,2.991900806
+E. mundtii,salicylic,3.332051345
+E. mundtii,salicylic,3.440524667
+E. mundtii,salicylic,3.070351576
+E. mundtii,salicylic,5.278479438
+E. mundtii,salicylic,2.98568961
+E. mundtii,salicylic,3.221662319
+E. mundtii,salicylic,3.289669449
+E. mundtii,salicylic,3.345818089
+E. mundtii,salicylic,3.655109038
+E. mundtii,salicylic,3.778307472
+E. mundtii,salicylic,3.588923556
+E. mundtii,salicylic,3.171297664
+E. mundtii,salicylic,3.041016689
+E. mundtii,salicylic,3.618368643
+E. mundtii,salicylic,3.1989103
+E. mundtii,salicylic,3.505118656
+E. mundtii,salicylic,3.280082548
+E. mundtii,salicylic,3.561827036
+E. mundtii,salicylic,3.270057762
+E. mundtii,salicylic,3.539834794
+E. mundtii,salicylic,3.407320362
+E. mundtii,salicylic,3.235354825
+E. mundtii,salicylic,3.482200441
+E. mundtii,salicylic,6.040601547
+E. mundtii,salicylic,3.101362771
+E. mundtii,salicylic,3.316581371
+E. mundtii,salicylic,4.937768068
+E. mundtii,salicylic,3.305907605
+E. mundtii,salicylic,4.801529443
+E. mundtii,salicylic,3.443373975
+E. mundtii,salicylic,3.763347823
+E. mundtii,salicylic,3.09218187
+E. mundtii,salicylic,3.749988383
+E. mundtii,salicylic,4.839926021
+E. mundtii,salicylic,7.241891774
+E. mundtii,salicylic,4.546999811
+E. mundtii,salicylic,4.783831634
+E. mundtii,salicylic,3.867046943
+E. mundtii,salicylic,4.373935347
+E. mundtii,salicylic,3.787708117
+E. mundtii,salicylic,5.309963556
+E. mundtii,salicylic,3.723662182
+E. mundtii,salicylic,3.598958761
+E. mundtii,salicylic,3.537109255
+E. mundtii,salicylic,3.537555515
+E. mundtii,salicylic,3.278843938
+E. mundtii,salicylic,3.633153363
+E. mundtii,salicylic,3.498728811
+E. mundtii,salicylic,4.752479399
+E. mundtii,salicylic,3.370873577
+E. mundtii,salicylic,3.78045007
+E. mundtii,salicylic,3.418392363
+E. mundtii,salicylic,4.341920984
+E. mundtii,salicylic,3.876479565
+E. mundtii,salicylic,3.273688605
+E. mundtii,salicylic,3.485049327
+E. mundtii,salicylic,3.786072213
+E. mundtii,indole,3.496237204
+E. mundtii,indole,3.260596209
+E. mundtii,indole,3.699699668
+E. mundtii,indole,4.448631651
+E. mundtii,indole,5.104210575
+E. mundtii,indole,3.685103539
+E. mundtii,indole,3.67089644
+E. mundtii,indole,3.355757005
+E. mundtii,indole,3.608062944
+E. mundtii,indole,3.531493821
+E. mundtii,indole,3.436697993
+E. mundtii,indole,3.294109189
+E. mundtii,indole,4.052903083
+E. mundtii,indole,3.907934376
+E. mundtii,indole,3.513777853
+E. mundtii,indole,3.372500872
+E. mundtii,indole,3.958616949
+E. mundtii,indole,3.474217864
+E. mundtii,indole,3.912210911
+E. mundtii,indole,3.315280004
+E. mundtii,indole,3.615167482
+E. mundtii,indole,3.329184691
+E. mundtii,indole,3.928634978
+E. mundtii,indole,3.280657035
+E. mundtii,indole,3.966491346
+E. mundtii,indole,4.217514964
+E. mundtii,indole,3.866058136
+E. mundtii,indole,3.562122007
+E. mundtii,indole,3.395696534
+E. mundtii,indole,3.631879546
+E. mundtii,indole,4.039123604
+E. mundtii,indole,3.512136621
+E. mundtii,indole,4.030016138
+E. mundtii,indole,4.226323776
+E. mundtii,indole,3.578747065
+E. mundtii,indole,3.527030365
+E. mundtii,indole,4.04743724
+E. mundtii,indole,3.588517117
+E. mundtii,indole,4.279783896
+E. mundtii,indole,5.030137984
+E. mundtii,indole,3.51009393
+E. mundtii,indole,3.339622455
+E. mundtii,indole,4.397193066
+E. mundtii,indole,3.41540274
+E. mundtii,indole,3.880791729
+E. mundtii,indole,4.974912258
+E. mundtii,indole,4.606420013
+E. mundtii,indole,4.341991352
+E. mundtii,indole,3.246575218
+E. mundtii,indole,3.507407543
+E. mundtii,indole,3.507462531
+E. mundtii,indole,5.186339623
+E. mundtii,indole,4.68954143
+E. mundtii,indole,7.225175752
+E. mundtii,indole,4.426090949
+E. mundtii,indole,5.509882087
+E. mundtii,indole,3.883760012
+E. mundtii,indole,3.595030014
+E. mundtii,indole,4.171264391
+E. mundtii,indole,5.308962136
+xenic,control,1.80104938
+xenic,control,2.237885236
+xenic,control,1.706340994
+xenic,control,2.619698044
+xenic,control,3.181127099
+xenic,control,1.66695539
+xenic,control,2.420615211
+xenic,control,2.449461426
+xenic,control,2.461604128
+xenic,control,2.048929102
+xenic,control,1.144029563
+xenic,control,2.68023399
+xenic,control,2.771860623
+xenic,control,1.684508933
+xenic,control,2.760570042
+xenic,control,2.233191788
+xenic,control,1.549746277
+xenic,control,2.328510437
+xenic,control,2.549894757
+xenic,control,1.874394494
+xenic,control,2.769012548
+xenic,control,2.286712845
+xenic,control,2.713172755
+xenic,control,1.974183931
+xenic,control,1.719479508
+xenic,control,2.266789498
+xenic,control,2.267903178
+xenic,control,1.833784834
+xenic,control,2.06800949
+xenic,control,1.7833677
+xenic,control,1.281173981
+xenic,control,3.859959101
+xenic,control,1.664996931
+xenic,control,2.285303759
+xenic,control,1.608343389
+xenic,control,1.770036836
+xenic,control,1.883674654
+xenic,control,1.60375874
+xenic,control,2.001052114
+xenic,control,2.464183454
+xenic,control,1.414606984
+xenic,control,1.738822622
+xenic,control,1.969895382
+xenic,control,1.846682044
+xenic,control,3.160042915
+xenic,control,2.03634892
+xenic,control,1.712611702
+xenic,control,2.023373771
+xenic,control,2.368684376
+xenic,control,1.910488668
+xenic,control,2.148016252
+xenic,control,2.421524137
+xenic,control,1.588458793
+xenic,control,1.851936485
+xenic,control,1.680725452
+xenic,control,1.589932583
+xenic,control,2.463649179
+xenic,control,2.373109904
+xenic,control,2.766044893
+xenic,control,2.060666067
+xenic,benzoic,2.018602005
+xenic,benzoic,1.495761539
+xenic,benzoic,0.3806283198
+xenic,benzoic,-1.183609026
+xenic,benzoic,1.962168137
+xenic,benzoic,1.293775978
+xenic,benzoic,1.088828547
+xenic,benzoic,0.1385146872
+xenic,benzoic,0.657104133
+xenic,benzoic,0.9419379291
+xenic,benzoic,2.715064966
+xenic,benzoic,1.593082315
+xenic,benzoic,0.9468190463
+xenic,benzoic,1.947919591
+xenic,benzoic,0.8703855078
+xenic,benzoic,0.3040500995
+xenic,benzoic,2.961296414
+xenic,benzoic,1.662265098
+xenic,benzoic,1.360647431
+xenic,benzoic,0.6281773217
+xenic,benzoic,1.700097024
+xenic,benzoic,1.329197208
+xenic,benzoic,1.440078082
+xenic,benzoic,1.971072903
+xenic,benzoic,0.5074332504
+xenic,benzoic,2.645491112
+xenic,benzoic,2.448322387
+xenic,benzoic,2.410799653
+xenic,benzoic,1.809169002
+xenic,benzoic,2.465012384
+xenic,benzoic,1.157446782
+xenic,benzoic,2.464535554
+xenic,benzoic,-8.705823611
+xenic,benzoic,1.929450409
+xenic,benzoic,2.460838584
+xenic,benzoic,2.44256267
+xenic,benzoic,1.089170728
+xenic,benzoic,0.8687319696
+xenic,benzoic,1.60506275
+xenic,benzoic,0.9892663575
+xenic,benzoic,1.841056127
+xenic,benzoic,1.708372763
+xenic,benzoic,1.327012885
+xenic,benzoic,1.970886879
+xenic,benzoic,2.108419782
+xenic,benzoic,1.453653005
+xenic,benzoic,1.771810911
+xenic,benzoic,0.7031110934
+xenic,benzoic,2.08252815
+xenic,benzoic,1.825965701
+xenic,benzoic,2.931066545
+xenic,benzoic,2.303315776
+xenic,benzoic,0.3281570799
+xenic,benzoic,1.619892884
+xenic,benzoic,1.871683196
+xenic,benzoic,2.342483842
+xenic,benzoic,1.34203761
+xenic,benzoic,1.943662435
+xenic,benzoic,2.078526703
+xenic,benzoic,2.197919193
+xenic,salicylic,1.898082368
+xenic,salicylic,0.5810347939
+xenic,salicylic,2.195091523
+xenic,salicylic,-0.3923759987
+xenic,salicylic,2.758295711
+xenic,salicylic,1.342673256
+xenic,salicylic,1.245034968
+xenic,salicylic,1.093581424
+xenic,salicylic,2.336857031
+xenic,salicylic,2.034655507
+xenic,salicylic,0.2209212362
+xenic,salicylic,2.444093052
+xenic,salicylic,2.637024911
+xenic,salicylic,1.670537324
+xenic,salicylic,2.42796927
+xenic,salicylic,1.965041723
+xenic,salicylic,1.518733525
+xenic,salicylic,2.345659494
+xenic,salicylic,-0.497414652
+xenic,salicylic,2.170443084
+xenic,salicylic,2.361600446
+xenic,salicylic,8.367093784
+xenic,salicylic,2.494287465
+xenic,salicylic,2.413369133
+xenic,salicylic,2.501510271
+xenic,salicylic,2.341445267
+xenic,salicylic,1.053100027
+xenic,salicylic,2.291979672
+xenic,salicylic,1.981685483
+xenic,salicylic,0.5208984574
+xenic,salicylic,2.428103394
+xenic,salicylic,0.9025578042
+xenic,salicylic,1.877070331
+xenic,salicylic,1.002044695
+xenic,salicylic,2.181164476
+xenic,salicylic,1.879185585
+xenic,salicylic,1.772709487
+xenic,salicylic,1.522886834
+xenic,salicylic,1.436633395
+xenic,salicylic,1.037580466
+xenic,salicylic,-0.4058101296
+xenic,salicylic,1.465462437
+xenic,salicylic,1.682306424
+xenic,salicylic,1.753405703
+xenic,salicylic,2.248025816
+xenic,salicylic,1.02724287
+xenic,salicylic,1.88905546
+xenic,salicylic,2.128976898
+xenic,salicylic,1.325019093
+xenic,salicylic,1.72626101
+xenic,salicylic,1.720726873
+xenic,salicylic,1.255607995
+xenic,salicylic,1.033551325
+xenic,salicylic,2.57603251
+xenic,salicylic,0.8845747053
+xenic,salicylic,1.237587196
+xenic,salicylic,1.853698119
+xenic,salicylic,1.991390164
+xenic,salicylic,1.973011338
+xenic,salicylic,2.377271309
+xenic,indole,2.278374378
+xenic,indole,2.899166598
+xenic,indole,1.688835035
+xenic,indole,2.432357713
+xenic,indole,2.68210684
+xenic,indole,2.980717039
+xenic,indole,2.611336006
+xenic,indole,2.888582848
+xenic,indole,2.686796933
+xenic,indole,3.691043747
+xenic,indole,3.063694521
+xenic,indole,2.695848771
+xenic,indole,2.063938436
+xenic,indole,2.168477683
+xenic,indole,1.220939714
+xenic,indole,2.28182493
+xenic,indole,2.503182325
+xenic,indole,2.750816132
+xenic,indole,2.023918395
+xenic,indole,2.729366238
+xenic,indole,3.080720231
+xenic,indole,2.147118319
+xenic,indole,3.076453686
+xenic,indole,2.739771847
+xenic,indole,2.46074302
+xenic,indole,2.781819961
+xenic,indole,2.72564816
+xenic,indole,3.087344473
+xenic,indole,2.32393996
+xenic,indole,4.981013258
+xenic,indole,1.758579818
+xenic,indole,2.38437962
+xenic,indole,2.554303793
+xenic,indole,2.35739405
+xenic,indole,2.649080771
+xenic,indole,2.81477115
+xenic,indole,3.225360125
+xenic,indole,2.247591618
+xenic,indole,2.168340913
+xenic,indole,3.467545799
+xenic,indole,2.367233677
+xenic,indole,3.265321681
+xenic,indole,2.792926448
+xenic,indole,4.036909035
+xenic,indole,1.884939641
+xenic,indole,3.453408423
+xenic,indole,1.259941982
+xenic,indole,2.877748126
+xenic,indole,2.804271437
+xenic,indole,2.155485913
+xenic,indole,2.463480354
+xenic,indole,4.076153279
+xenic,indole,2.729295733
+xenic,indole,2.816780468
+xenic,indole,3.009914674
+xenic,indole,2.192874231
+xenic,indole,2.397005067
+xenic,indole,1.945454112
+xenic,indole,2.593749371
+xenic,indole,1.548378135
