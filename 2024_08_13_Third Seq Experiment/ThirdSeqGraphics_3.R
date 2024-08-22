@@ -51,14 +51,16 @@ ba_box <- ggplot(ba.data, aes(x = diet_type, y = ba_avg, fill = microbe_level))+
   scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name ="",
                      labels = c("Axenic", "E. mundtii", "Xenic")) +
   labs(x = "Diet Treatment", y = "BA Concentration (ng/g)") +
-  scale_y_log10(breaks = c(300, 500, 700, 1000, 2000,3000, 5000, 7000, 10000,16000))+
-  scale_x_discrete(labels = c("Control", "BA-Spiked")) +
+  scale_y_log10(breaks = c(50,100, 300, 500, 700, 1000, 2000,3000, 5000, 7000, 10000,16000))+
+   scale_x_discrete(labels = c("Control", "BA-Spiked")) +
   theme(axis.text = element_text(size =15),
         axis.title = element_text(size=20),
         legend.title = element_blank(),
         legend.text = element_text(size=15))
-  
+#annoying. It will not show the 100 and 50 breaks I want it to show
 ba_box
+#scale_y_log10(breaks = c(50, 100, 300, 500, 700, 1000, 2000,3000, 5000, 7000, 10000,16000)
+              #  scale_y_log10(breaks = c(300, 500, 700, 1000, 2000,3000, 5000, 7000, 10000,16000))+
 
 sa_box <-  ggplot(sa.data, aes(x = diet_type, y = sa_avg, fill = microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
@@ -69,7 +71,7 @@ sa_box <-  ggplot(sa.data, aes(x = diet_type, y = sa_avg, fill = microbe_level))
                      labels = c("Axenic", "E. mundtii", "Xenic"))+
   labs(x = "Diet Treatment", y = "SA Concentration (ng/g)") +
   scale_x_discrete(labels = c("Control", "SA-Spiked")) +
-  scale_y_log10(breaks = c(30, 100, 1000, 3000, 10000, 15000, 20000, 30000))+
+  scale_y_log10(breaks = c(30, 100, 1000, 3000, 10000, 20000, 30000, 50000))+
   theme(axis.text.x = element_text(size =15),
         axis.text.y = element_text(size=12),
         axis.title = element_text(size=20),
