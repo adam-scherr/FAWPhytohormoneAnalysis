@@ -54,50 +54,58 @@ iaa.only.data <- iaa.data %>%
 ba_box <- ggplot(ba.only.data, aes(x = seq_experiment, y = ba_avg, fill = microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
   geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
-  scale_fill_manual(values = c("#9ecae1", "#2171b5", "#08306b"))+
-  scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b")) +
-  scale_y_continuous(expand = c(0,0), limits = c(0,17000))
- # labs(x = "Diet Treatment", y = "BA Concentration (ng/g)") +
-  #theme_clean() +
-  # scale_x_discrete(labels = c("Control", "BA-Spiked")) +
-  # theme(axis.text = element_text(size =15),
-  #       panel.grid.major = element_line(size = 2),
-  #       axis.title = element_text(size=20),
-  #       legend.title = element_blank(),
-  #       legend.text = element_text(size=15))
+  scale_fill_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name = "",
+                     labels = c("Axenic", "E. mundtii", "Xenic")) +
+  scale_y_continuous(expand = c(0,0), limits = c(0,17000))+
+ labs(x = "Sequestration Experiment", y = "BA Concentration (ng/g)") +
+  theme_clean() +
+  scale_x_discrete(labels = c("Second", "Third")) +
+   theme(axis.text = element_text(size =15),
+         panel.grid.major = element_line(size = 2),
+         axis.title = element_text(size=20),
+         legend.title = element_blank(),
+         legend.text = element_text(size=15))
   
 ba_box
 
 sa_box <-  ggplot(sa.only.data, aes(x = seq_experiment, y = sa_avg, fill = microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
   geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
-  scale_fill_manual(values = c("#a1d99b", "#41ab5d", "#00441b"))+
-  scale_color_manual(values = c("#a1d99b", "#41ab5d", "#00441b"))+
-  scale_y_continuous(expand = c(0,0), limits = c(0,45000))
- # labs(x = "Diet Treatment", y = "SA Concentration (ng/g)") 
-  # theme_clean() +
-  # scale_x_discrete(labels = c("Control", "SA-Spiked")) +
-  # theme(axis.text = element_text(size =15),
-  #       panel.grid.major = element_line(size = 2),
-  #       axis.title = element_text(size=20),
-  #       legend.title = element_blank(),
-  #       legend.text = element_text(size=15))
+  scale_fill_manual(values = c("#a1d99b", "#41ab5d", "#00441b"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_color_manual(values = c("#a1d99b", "#41ab5d", "#00441b"), name = "",
+                     labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_y_continuous(expand = c(0,0), limits = c(0,45000)) + 
+  labs(x = "Sequestration Experiment", y = "SA Concentration (ng/g)") +
+  theme_clean() +
+  scale_x_discrete(labels = c("Second", "Third")) +
+  theme(axis.text = element_text(size =15),
+        panel.grid.major = element_line(size = 2),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
+
 sa_box
 
 iaa_box <-  ggplot(iaa.only.data, aes(x = seq_experiment, y = iaa_avg, fill = microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
   geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
-  scale_fill_manual(values = c("#fdae6b", "#f16913" ,"#7f2704"))+
-  scale_color_manual(values = c("#fdae6b", "#f16913" ,"#7f2704"))+
-  scale_y_continuous(expand = c(0,0), limits = c(0,50000))
-  # labs(x = "Diet Treatment", y = "IAA Concentration (ng/g)") +
-  # theme_clean() +
-  # scale_x_discrete(labels = c("Control", "IAA-Spiked")) +
-  # theme(axis.text = element_text(size =15),
-  #       panel.grid.major = element_line(size = 2),
-  #       axis.title = element_text(size=20),
-  #       legend.title = element_blank(),
-  #       legend.text = element_text(size=15))
+  scale_fill_manual(values = c("#fdae6b", "#f16913" ,"#7f2704"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_color_manual(values = c("#fdae6b", "#f16913" ,"#7f2704"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_y_continuous(expand = c(0,0), limits = c(0,50000))+
+  labs(x = "Sequestration Experiment", y = "IAA Concentration (ng/g)") +
+  theme_clean() +
+  scale_x_discrete(labels = c("Second", "Third")) +
+  theme(axis.text = element_text(size =15),
+        panel.grid.major = element_line(size = 2),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
+
 iaa_box
 
 
@@ -116,46 +124,53 @@ unspiked.iaa.data <- iaa.data %>%
 unspiked.ba.box <- ggplot(unspiked.ba.data, aes(x = seq_experiment, y = ba_avg, fill=microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
   geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
-  scale_fill_manual(values = c("#9ecae1", "#2171b5", "#08306b"))+
-  scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b"))
-# labs(x = "Microbe Treatment", y = "BA Concentration (ng/g)") +
-#   theme_clean() +
-#  scale_x_discrete(labels = c("Axenic", "E. mundtii", "Xenic")) +
-#   theme(axis.text = element_text(size =15),
-#         panel.grid.major = element_line(size = 2),
-#         axis.title = element_text(size=20),
-#         legend.title = element_blank(),
-#         legend.text = element_text(size=15))
+  scale_fill_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name = "",
+                     labels = c("Axenic", "E. mundtii", "Xenic"))+
+  labs(x = "Sequestration Experiment", y = "BA Concentration (ng/g)") +
+  theme_clean() +
+  scale_x_discrete(labels = c("Second", "Third")) +
+  theme(axis.text = element_text(size =15),
+        panel.grid.major = element_line(size = 2),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
+
 unspiked.ba.box
 
 unspiked.sa.box <- ggplot(unspiked.sa.data, aes(x = seq_experiment, y = sa_avg, fill=microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
   geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
-  scale_fill_manual(values = c("#a1d99b", "#41ab5d", "#00441b"))+
-  scale_color_manual(values = c("#a1d99b", "#41ab5d", "#00441b")) 
-  # labs(x = "Microbe Treatment", y = "SA Concentration (ng/g)") +
-  # theme_clean() +
-  # scale_x_discrete(labels = c("Axenic", "E. mundtii", "Xenic")) +
-  # theme(axis.text = element_text(size =15),
-  #       panel.grid.major = element_line(size = 2),
-  #       axis.title = element_text(size=20),
-  #       legend.title = element_blank(),
-  #       legend.text = element_text(size=15))
+  scale_fill_manual(values = c("#a1d99b", "#41ab5d", "#00441b"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_color_manual(values = c("#a1d99b", "#41ab5d", "#00441b"), name = "",
+                     labels = c("Axenic", "E. mundtii", "Xenic"))+
+  labs(x = "Sequestration Experiment", y = "SA Concentration (ng/g)") +
+  theme_clean() +
+  scale_x_discrete(labels = c("Second", "Third")) +
+  theme(axis.text = element_text(size =15),
+        panel.grid.major = element_line(size = 2),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
 unspiked.sa.box
 
 unspiked.iaa.box <- ggplot(unspiked.iaa.data, aes(x = seq_experiment, y = iaa_avg, fill=microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
   geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
-  scale_fill_manual(values = c("#fdae6b", "#f16913" ,"#7f2704"))+
-  scale_color_manual(values = c("#fdae6b", "#f16913" ,"#7f2704")) 
-  # labs(x = "Microbe Treatment", y = "IAA Concentration (ng/g)") +
-  # theme_clean() +
-  # scale_x_discrete(labels = c("Axenic", "E. mundtii", "Xenic")) +
-  # theme(axis.text = element_text(size =15),
-  #       panel.grid.major = element_line(size = 2),
-  #       axis.title = element_text(size=20),
-  #       legend.title = element_blank(),
-  #       legend.text = element_text(size=15))
+  scale_fill_manual(values = c("#fdae6b", "#f16913" ,"#7f2704"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_color_manual(values = c("#fdae6b", "#f16913" ,"#7f2704"), name = "",
+                     labels = c("Axenic", "E. mundtii", "Xenic"))+
+  labs(x = "Sequestration Experiment", y = "IAA Concentration (ng/g)") +
+  theme_clean() +
+  scale_x_discrete(labels = c("Second", "Third")) +
+  theme(axis.text = element_text(size =15),
+        panel.grid.major = element_line(size = 2),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
 unspiked.iaa.box
 
 #####Combined Data Graphs####
@@ -194,14 +209,15 @@ combined_iaa_box <-  ggplot(iaa.only.data, aes(x = microbe_level, y = iaa_avg, f
 combined_iaa_box
 
 #####2 diets, 3 microbe treatments, and 2 sequestration experiments, graphics combined####
-all_ba_box <- ggplot(ba.data, aes(x = diet_type, y = ba_avg, fill = microbe_level))+
+all_ba_box.1 <- ggplot(ba.data, aes(x = diet_type, y = ba_avg, fill = microbe_level))+
   geom_boxplot(width=0.8, color = "black")+
   geom_point(size = 4, alpha = 1, aes(color = seq_experiment))+
   scale_fill_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name = c(""),
                                labels = c("Axenic", "E. mundtii", "Xenic"))+
   scale_color_manual(values = c("#C594D2", "#A01C1C"), name = c("Sequestration Experiment"),
                      labels = c("Second", "Third")) +
-  scale_y_log10(n.breaks = 12)+
+  #scale_y_log10(n.breaks = 12)+ (I think it was n.breaks = 12? It was around there)
+  scale_y_log10(breaks = c(50, 100, 300, 500, 700, 1000, 2000,3000, 5000, 7000, 10000,16000))+
   labs(x = "Diet Treatment", y = "BA Concentration (ng/g)") +
   scale_x_discrete(labels = c("Control", "BA-Spiked")) +
   theme(axis.text = element_text(size =15),
@@ -209,32 +225,37 @@ all_ba_box <- ggplot(ba.data, aes(x = diet_type, y = ba_avg, fill = microbe_leve
         legend.title = element_text(size=10),
         legend.text = element_text(size=10))
 
-all_ba_box
+#all_ba_box
+all_ba_box.1
 
-all_sa_box <-  ggplot(sa.data, aes(x = diet_type, y = sa_avg, fill = microbe_level))+
+all_sa_box.1 <-  ggplot(sa.data, aes(x = diet_type, y = sa_avg, fill = microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
   geom_point(size = 4, alpha = 1,aes(color = seq_experiment))+
   scale_fill_manual(values = c("#a1d99b", "#41ab5d", "#00441b"), name = "",
                     labels = c("Axenic", "E. mundtii", "Xenic"))+
   scale_color_manual(values = c("#C594D2", "#A01C1C"), name = c("Sequestration Experiment"),
                      labels = c("Second", "Third"))+
-  scale_y_log10(n.breaks = 8)+
+  #scale_y_log10(n.breaks = 8)+
+  scale_y_log10(breaks = c(30, 100, 1000, 3000, 10000, 20000, 30000, 50000))+
   labs(x = "Diet Treatment", y = "SA Concentration (ng/g)") +
   scale_x_discrete(labels = c("Control", "SA-Spiked")) +
-  theme(axis.text = element_text(size =15),
+  theme(axis.text.x = element_text(size =15),
+        axis.text.y = element_text(size = 12),
         axis.title = element_text(size=20),
         legend.title = element_text(size = 10),
         legend.text = element_text(size=10))
 all_sa_box
+all_sa_box.1
 
-all_iaa_box <-  ggplot(iaa.data, aes(x = diet_type, y = iaa_avg, fill = microbe_level))+
+all_iaa_box.1 <-  ggplot(iaa.data, aes(x = diet_type, y = iaa_avg, fill = microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
   geom_point(size = 4, alpha = 1,aes(color = seq_experiment))+
   scale_fill_manual(values = c("#fdae6b", "#f16913" ,"#7f2704"), name = "",
                     labels = c("Axenic", "E. mundtii", "Xenic"))+
   scale_color_manual(values = c("#C594D2", "#A01C1C"), name = c("Sequestration Experiment"),
                      labels = c("Second", "Third"))+
-  scale_y_log10(n.breaks=10)+
+ #scale_y_log10(n.breaks=10)+
+  scale_y_log10(breaks = c(30, 50, 100, 300, 500, 1000, 3000, 5000, 10000, 20000, 30000, 50000))+
   labs(x = "Diet Treatment", y = "IAA Concentration (ng/g)") +
   scale_x_discrete(labels = c("Control", "IAA-Spiked")) +
   theme(axis.text = element_text(size =15),
@@ -242,3 +263,4 @@ all_iaa_box <-  ggplot(iaa.data, aes(x = diet_type, y = iaa_avg, fill = microbe_
         legend.title = element_text(size = 10),
         legend.text = element_text(size=10))
 all_iaa_box
+all_iaa_box.1
