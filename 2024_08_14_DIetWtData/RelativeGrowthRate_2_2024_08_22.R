@@ -84,6 +84,15 @@ cld(emmeans(larval.wt.model, pairwise ~ microbe_level*diet_type, adjust = "tukey
   #statistically significant differences for all possible interactions between
   #the three microbe levels, although when you introduce diet_type, you get more overlap
 
+##Two-way ANOVA for microbe_level, based on days of growth to reach max size
+days.model <- aov(days_of_growth ~ microbe_level*diet_type, data = data)
+
+#check assumptions
+plot(days.model)
+  #obviusly not continuous data. Since I'm keeping the days as whole integers
+
+#running TukeyHSDpothoc test
+TukeyHSD(days.model, conf.level=0.95)
 
 #####Two-Way ANOVA for each microbe_level, based on larval weight divided by days of growth
 growth.rate.model <- aov(larvalWt_div_daysOfGrowth ~ microbe_level*diet_type, data = data)
