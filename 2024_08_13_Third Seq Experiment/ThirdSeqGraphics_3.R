@@ -48,8 +48,8 @@ ba_box <- ggplot(ba.data, aes(x = diet_type, y = ba_avg, fill = microbe_level))+
   geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
   scale_fill_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name = "",
                     labels = c("Axenic", "E. mundtii", "Xenic"))+
-  scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name ="",
-                     labels = c("Axenic", "E. mundtii", "Xenic")) +
+  # scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name ="",
+  #                    labels = c("Axenic", "E. mundtii", "Xenic")) +
   labs(x = "Diet Treatment", y = "BA Concentration (ng/g)") +
   scale_y_log10(breaks = c(50,100, 300, 500, 700, 1000, 2000,3000, 5000, 7000, 10000,16000))+
    scale_x_discrete(labels = c("Control", "BA-Spiked")) +
@@ -61,6 +61,58 @@ ba_box <- ggplot(ba.data, aes(x = diet_type, y = ba_avg, fill = microbe_level))+
 ba_box
 #scale_y_log10(breaks = c(50, 100, 300, 500, 700, 1000, 2000,3000, 5000, 7000, 10000,16000)
               #  scale_y_log10(breaks = c(300, 500, 700, 1000, 2000,3000, 5000, 7000, 10000,16000))+
+
+
+#####wacky stuff with Jared Adam ;) ####
+ggplot(ba.data, aes(x = diet_type, y = ba_avg, fill = microbe_level))+
+  geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
+  geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
+  scale_fill_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  # scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name ="",
+  #                    labels = c("Axenic", "E. mundtii", "Xenic")) +
+  labs(x = "Diet Treatment", y = "BA Concentration (ng/g)") +
+  scale_y_continuous(breaks = c(50, 100, 300,500,700, 1000, 3000, 5000, 7000, 10000,16000))+
+  scale_x_discrete(labels = c("Control", "BA-Spiked")) +
+  theme(axis.text = element_text(size =15),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
+ba.data <- data.1 %>%
+  select(1:6) %>%
+  filter(diet_type == "benzoic" | diet_type == "control")
+
+spiked.ba <- ba.data %>%
+  filter(diet_type =="benzoic")
+
+spiked.ba.box <- ggplot(spiked.ba, aes(x = microbe_level, y = ba_avg, fill=microbe_level))+
+  geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
+  geom_point(size = 4, alpha = 1, position=position_dodge(width=0.8), aes(color = microbe_level))+
+  scale_fill_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name = "",
+                    labels = c("Axenic", "E. mundtii", "Xenic"))+
+  scale_color_manual(values = c("#9ecae1", "#2171b5", "#08306b"), name ="",
+                     labels = c("Axenic", "E. mundtii", "Xenic")) +
+  labs(x = "Microbe Treatment", y = "BA Concentration (ng/g)") +
+  theme_clean() +
+  scale_x_discrete(labels = c("Axenic", "E. mundtii", "Xenic")) +
+  theme(axis.text = element_text(size =15),
+        panel.grid.major = element_line(size = 2),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
+
+spiked.ba.box
+
+install.packages("ggpubr")
+library(ggpubr)
+ggarrange(unspiked.ba.box, spiked.ba.box)
+  #hone this, have only one legend, only one y axis title, possibly see if you can
+  #make a single x-axis, maybe a single y-axis?
+  #look into ggarrange and play with it, maybe see if ggpubr has any neat tricks
+#https://stackoverflow.com/questions/64757410/shared-x-and-y-axis-labels-ggplot2-with-ggarrange 
+#https://www.r-bloggers.com/2019/05/the-small-multiples-plot-how-to-combine-ggplot2-plots-with-one-shared-axis/
+#https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html
+
 
 sa_box <-  ggplot(sa.data, aes(x = diet_type, y = sa_avg, fill = microbe_level))+
   geom_boxplot(width=0.8, color = "black", alpha = 0.82)+
