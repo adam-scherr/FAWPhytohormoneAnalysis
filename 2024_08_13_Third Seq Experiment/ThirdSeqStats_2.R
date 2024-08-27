@@ -34,6 +34,9 @@ ba.data <- data.1 %>%
   select(1:6) %>%
   filter(diet_type == "benzoic" | diet_type == "control")
 
+ba.sa.data <- data.1 %>%
+  filter(diet_type != "indole")
+
 sa.data <- data.1 %>%
   select(1:3, 7:9) %>%
   filter(diet_type == "salicylic" | diet_type == "control")
@@ -77,6 +80,25 @@ par(mfrow=c(2,2))
 plot(ba.model)
   #the variance is pretty well distributed, and the normality is not perfect but I think still sufficient
 
+
+####whacky fun time with Jared Adam ####
+lm1 <- lm(ba_avg^0.3 ~ microbe_level*diet_type, data = ba.data)
+summary(lm1)
+anova(lm1)
+summary(ba.model)
+lm2 <- lm(ba_avg^0.3 ~ microbe_level*diet_type+id, data = ba.data)
+summary(lm2)
+install.packages("effects")
+library(effects)
+plot(allEffects(lm1))
+plot(allEffects(lm2))
+
+#now for BA-spiked, SA-spiked and unspiked diet effect on SA levels
+ba.sa.model <- aov(sa_avg^0.3 ~ microbe_level*diet_type, data = ba.sa.data)
+plot(ba.sa.model) #looks good now that it's transformed
+    #transformed by raising sa_avg to power of 3/10
+
+
 #now for SA-spiked and unspiked diet, looking at SA levels in salivary glands
 sa.model <- aov(sa_avg ~ microbe_level*diet_type, data = sa.data)
 plot(sa.model)
@@ -110,6 +132,7 @@ library(multcomp)
 TukeyHSD(ba.model, conf.level=0.95)
 cld(emmeans(ba.model, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
     Letters =letters, alpha = 0.05)
+ba.model
   #output:
 # microbe_level diet_type emmean  SE df lower.CL upper.CL .group
 # xenic         control     0.00 1.4 18  -2.9320     2.93  a    
@@ -118,6 +141,23 @@ cld(emmeans(ba.model, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
 # E. mundtii    benzoic    12.34 1.4 18   9.4130    15.28   b   
 # axenic        benzoic    13.14 1.4 18  10.2059    16.07   b   
 # xenic         benzoic    13.93 1.4 18  10.9959    16.86   b 
+
+
+#post hoc for SA levels in BA-spiked, SA-spiked, and unspiked diet, transformed version
+TukeyHSD(ba.sa.model, conf.level = 0.95)
+cld(emmeans(ba.sa.model, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
+    Letters = letters, alpha = 0.05)
+  #output:
+# microbe_level diet_type emmean   SE df lower.CL upper.CL .group
+# axenic        control    0.226 1.11 27   -2.061     2.51  a    
+# E. mundtii    benzoic    0.749 1.11 27   -1.538     3.04  a    
+# xenic         control    1.233 1.11 27   -1.053     3.52  a    
+# xenic         benzoic    3.025 1.11 27    0.738     5.31  a    
+# axenic        benzoic    3.075 1.11 27    0.788     5.36  a    
+# E. mundtii    control    3.349 1.11 27    1.063     5.64  a    
+# axenic        salicylic 15.005 1.11 27   12.718    17.29   b   
+# E. mundtii    salicylic 17.476 1.11 27   15.189    19.76   b   
+# xenic         salicylic 19.843 1.11 27   17.556    22.13   b 
 
 #post hoc for SA data, using the transformed version of the data (sa.model.1)
 TukeyHSD(sa.model.1, conf.level=0.95)
