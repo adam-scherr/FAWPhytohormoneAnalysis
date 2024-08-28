@@ -63,16 +63,24 @@ df <- data.frame(microbe_treatment, wt_avg, wt_sterr, growth_avg, growth_sterr)
 ####Bar graphs of averages and standard errors####
 ggplot(df, aes(microbe_treatment, y = wt_avg, fill = microbe_treatment))+
   geom_col() +
-  geom_errorbar(ymin = (wt_avg-wt_sterr), ymax = (wt_avg+wt_sterr), width = 0.6) +
+  geom_errorbar(aes(ymin = (wt_avg-wt_sterr), ymax = (wt_avg+wt_sterr)), width = 0.6) +
   labs(x = "Microbe Treatment", y = "Average Larval Weight (g)")+
-  scale_fill_manual(values = c("#1b9e77", "#d95f02", "#7570b3"), name = "")
+  scale_fill_manual(values = c("#1b9e77", "#d95f02", "#7570b3"), name = "")+
+  theme(axis.text = element_text(size =15),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
 
 ggplot(df, aes(microbe_treatment, y=growth_avg, fill = microbe_treatment))+
   geom_col()+
-  geom_errorbar(ymin = (growth_avg - growth_sterr), ymax = (growth_avg+growth_sterr),
+  geom_errorbar(aes(ymin = (growth_avg - growth_sterr), ymax = (growth_avg+growth_sterr)),
                 width=0.6)+
   labs(x="Microbe Treatment", y="Larval Weight (g) / Days of Growth")+
-  scale_fill_manual(values=c("#66c2a5", "#fc8d62", "#8da0cb"), name="")
+  scale_fill_manual(values=c("#66c2a5", "#fc8d62", "#8da0cb"), name="")+
+  theme(axis.text = element_text(size =15),
+        axis.title = element_text(size=20),
+        legend.title = element_blank(),
+        legend.text = element_text(size=15))
 
 
 #####Box and Whisker Plots####
