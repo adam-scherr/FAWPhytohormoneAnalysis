@@ -1,0 +1,33 @@
+microbe_level,id,colony_count_10-4_solution,midgut_wt,colony_concentration_per_gram_midgut,colony_count_10-2_solution,midgut_wt,colony_concentration_per_gram_midgut
+OD 0.65,65-1,2,0.0031,645.1612903,,,
+OD 0.65,65-2,24,0.0029,8275.862069,,,
+OD 0.65,65-3,3,0.0063,476.1904762,,,
+OD 0.65,65-4,26,0.0062,4193.548387,,,
+OD 0.65,65-5,12,0.0087,1379.310345,,,
+OD 0.65,65-6,21,0.0035,6000,,,
+OD 0.65,65-7,2,0.0037,540.5405405,,,
+OD 0.65,65-8,176,0.006,29333.33333,,,
+OD 0.32,32-1,72,0.0042,17142.85714,,,
+OD 0.32,32-2,86,0.0043,20000,,,
+OD 0.32,32-3,131,0.0022,59545.45455,,,
+OD 0.32,32-4,189,0.0087,21724.13793,,,
+OD 0.32,32-5,19,0.0054,3518.518519,,,
+OD 0.32,32-6,15,0.0077,1948.051948,,,
+OD 0.32,32-7,104,0.0061,17049.18033,,,
+OD 0.32,32-8,106,0.006,17666.66667,,,
+"xenic, no antibiotics",NX-1,1,0.0022,454.5454545,,,
+"xenic, no antibiotics",NX-2,5,0.0004,12500,,,
+"xenic, no antibiotics",NX-3,0,0.004,0,,,
+"xenic, no antibiotics",NX-4,0,0.0029,0,,,
+"xenic, no antibiotics",NX-5,18,0.0093,1935.483871,,,
+"xenic, no antibiotics",NX-6,83,0.0061,13606.55738,,,
+"xenic, no antibiotics",NX-7,4,0.0034,1176.470588,,,
+"xenic, no antibiotics",NX-8,5,0.0021,2380.952381,,,
+"xenic, yes antibiotics",YX-1,0,0.0049,0,0,0.0049,0
+"xenic, yes antibiotics",YX-2,0,0.0035,0,93,0.0035,265.7142857
+"xenic, yes antibiotics",YX-3,0,0.0037,0,0,0.0037,0
+"xenic, yes antibiotics",YX-4,0,0.0037,0,28,0.0037,75.67567568
+"xenic, yes antibiotics",YX-5,0,0.0074,0,76,0.0074,102.7027027
+"xenic, yes antibiotics",YX-6,0,0.0061,0,0,0.0061,0
+"xenic, yes antibiotics",YX-7,0,0.0061,0,107,0.0061,175.4098361
+"xenic, yes antibiotics",YX-8,0,0.002,0,35,0.002,175
