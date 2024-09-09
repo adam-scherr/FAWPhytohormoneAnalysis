@@ -118,7 +118,8 @@ df.iaa <- df %>%
 #####Making Graphs using averages and standard errors
 ba.bar <- ggplot(df.ba, aes(x = microbe_treatment, y = spiked_avg, fill = microbe_treatment))+
   geom_col(width=0.8)+
-  geom_errorbar(aes(ymin= spiked_avg-spiked_sterr, ymax= spiked_avg+spiked_sterr), width=0.6)+
+  geom_errorbar(aes(ymin= spiked_avg-spiked_sterr, ymax= spiked_avg+spiked_sterr), width=0.6,
+                linewidth=1)+
   scale_fill_manual(values = c("#9ecae1", "#2171b5"), name = "")+
   labs(x = "Microbe Treatment", y= "BA Concentration (ng/g)") +
    theme_clean() +
@@ -131,7 +132,8 @@ ba.bar
 
 sa.bar <- ggplot(df.sa, aes(x = microbe_treatment, y = spiked_avg, fill = microbe_treatment))+
   geom_col(width=0.8)+
-  geom_errorbar(aes(ymin= spiked_avg-spiked_sterr, ymax= spiked_avg+spiked_sterr), width=0.6)+
+  geom_errorbar(aes(ymin= spiked_avg-spiked_sterr, ymax= spiked_avg+spiked_sterr), width=0.6,
+                linewidth=1)+
   scale_fill_manual(values = c("#a1d99b", "#41ab5d"), name = "")+
    labs(x = "Microbe Treatment", y= "SA Concentration (ng/g)") +
    theme_clean() +
@@ -144,7 +146,8 @@ sa.bar
 
 iaa.bar <- ggplot(df.iaa, aes(x = microbe_treatment, y = spiked_avg, fill = microbe_treatment))+
   geom_col(width=0.8)+
-  geom_errorbar(aes(ymin= spiked_avg-spiked_sterr, ymax= spiked_avg+spiked_sterr), width=0.6)+
+  geom_errorbar(aes(ymin= spiked_avg-spiked_sterr, ymax= spiked_avg+spiked_sterr), width=0.6,
+                linewidth=1)+
   scale_fill_manual(values = c("#fdae6b", "#f16913"), name = "") +
    labs(x = "Microbe Treatment", y= "IAA Concentration (ng/g)") +
    theme_clean() +
