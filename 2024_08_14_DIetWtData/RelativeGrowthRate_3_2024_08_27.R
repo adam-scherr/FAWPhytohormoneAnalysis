@@ -53,7 +53,7 @@ xenic_sterr_growth <- st.error(xenic.data$larvalWt_div_daysOfGrowth)
 emund_sterr_growth <- st.error(emun.data$larvalWt_div_daysOfGrowth)
 
 #make a data frame with these data
-microbe_treatment <- c("axenic", "xenic", "E. mundtii")
+microbe_treatment <- c("Axenic", "Xenic", "E. mundtii")
 wt_avg <- c(axenic_avg_wt, xenic_avg_wt, emund_avg_wt)
 wt_sterr <- c(axenic_sterr_wt, xenic_sterr_wt, emund_sterr_wt)
 growth_avg <- c(axenic_avg_growth, xenic_avg_growth, emund_avg_growth)
@@ -103,10 +103,11 @@ ggplot(data, aes(x = microbe_level, y = final_larval_wt, color = microbe_level))
 ggplot(data, aes(x = microbe_level, y = days_of_growth, color = microbe_level))+
   #geom_boxplot(width = 0.8)+
   geom_jitter(height=0)+
-  scale_color_manual(values = c("#9b26b7", "#bf2b6c", "#ce382f"), name = "",
+  scale_color_manual(values = c("#1b9e77", "#d95f02", "#7570b3"), name = "",
                      labels = c("Axenic", "E. mundtii", "Xenic"))+
   labs(x = "Microbe Treatment", y = "Days to grow to maximum size") +
   scale_y_continuous(breaks = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), limits = c(0, 10))+
+  scale_x_discrete(labels = c("Axenic", "E. mundtii", "Xenic"))+
   theme(axis.text = element_text(size =15),
         axis.title = element_text(size=15),
         legend.title = element_blank())
