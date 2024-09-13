@@ -1,7 +1,7 @@
 ###Analysis of BA, SA, and IAA Sequestration data, controlled study
 ####adapted from Second Committee Meeting Code sessions
 ###Adam Scherr, 11/27/2023
-###Version 1, 05/09/2023
+###Version 3, 09/13/2024
 
 ####Introduction and Data Sets####
 #upload the dataset
@@ -82,27 +82,9 @@ ba.model <- aov(ba_avg ~ microbe_level*diet_type, data = ba.sal)
 summary(ba.model)
 plot(ba.model)
 
-ba.model.1 <- aov(ba_avg^.1 ~ microbe_level*diet_type, data = ba.sal)
+ba.model.1 <- aov(ba_avg^0.1 ~ microbe_level*diet_type, data = ba.sal)
 plot(ba.model.1)
-#trying to transform the data into a better form
-ba.sal$scaled.ba_avg <- as.numeric(scale(ba.sal$ba_avg)) ## scaling response (subtract by mean, and diving by SD)
-ba.model.scale <- aov(exp(scaled.ba_avg) ~ microbe_level*diet_type, data = ba.sal)
-summary(ba.model.scale)
 
-ba.model.lm <- glm(ba_avg ~ microbe_level*diet_type, data = ba.sal)
-summary(ba.model.lm)
-hist(residuals(ba.model.lm))
-cld(emmeans(ba.model.lm,~microbe_level*diet_type))
-
-ba.model.square <- aov(ba_avg^2 ~ microbe_level*diet_type, data = ba.sal)
-plot(ba.model.square)
-summary(ba.model.square)
-TukeyHSD(ba.model.square, conf.level=0.95)
-
-ba.glm.squared <- glm(ba_avg^2 ~ microbe_level * diet_type, data = ba.sal)
-summary(ba.glm.squared)
-plot(ba.glm.squared)
-cld(emmeans(ba.glm.squared,~microbe_level*diet_type, data = ba.sal))
 #check our assumptions
 par(mfrow = c(2, 2))
 plot(ba.model.scale)
@@ -112,7 +94,7 @@ plot(ba.model.scale)
 #So let's go through with it since our small number of points is skewing normality and variance so much
 summary(ba.model)
   #p=0.0261 for diet_type. Only diet_type has SIGNIFICANT effect on phytohormone concentration
-
+summary(ba.model.1)
 #two-way ANOVA on SA data
 sa.model <- aov(sa_avg ~ microbe_level*diet_type, data = sa.sal)
 
@@ -126,6 +108,7 @@ plot(sa.model.1)
 
 summary(sa.model)
   #SIGNIFICANT effect of diet_type on phytohormone concentration. p<0.001
+summary(sa.model.1)
 
 #two-way ANOVA on IAA data
 iaa.model <- aov(iaa_avg ~microbe_level*diet_type, data = iaa.sal)
@@ -140,6 +123,7 @@ summary(iaa.model)
   #p=0.0040, p<0.001, p=0.0042 respectively
 iaa.model.1 <- aov(iaa_avg^0.3 ~microbe_level*diet_type, data = iaa.sal)
 plot(iaa.model.1)
+summary(iaa.model.1)
 ###now do post hoc analysis for these two-way ANOVAs
 #BA post hoc
 TukeyHSD(ba.model, conf.level=0.95) #somehow no significance anywhere. Like. What.
@@ -156,6 +140,7 @@ cld(emmeans(ba.model, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
 # nonaxenic     benzoic   5413.1 1408  8     2166     8660  a 
 
 #see if the transformed BA model is any different
+TukeyHSD(ba.model.1, conf.level=0.95)
 cld(emmeans(ba.model.1, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
     Letters =letters, alpha = 0.05)
   #output:
@@ -182,6 +167,7 @@ cld(emmeans(sa.model, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
  # axenic        salicylic 13569.8 1340 12    10650    16489   b 
 
 #see if the transformed SA model is any different
+TukeyHSD(sa.model.1, conf.level=0.95)
 cld(emmeans(sa.model.1, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
     Letters =letters, alpha = 0.05)
   #output:
@@ -208,6 +194,7 @@ cld(emmeans(iaa.model, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
 # nonaxenic     indole    16317.88 1156  8    13653    18983    c  
 
 #see if the transformed SA model is any different
+TukeyHSD(iaa.model.1, conf.level = 0.95)
 cld(emmeans(iaa.model.1, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
     Letters =letters, alpha = 0.05)
   #output:
@@ -217,6 +204,47 @@ cld(emmeans(iaa.model.1, pairwise ~ microbe_level*diet_type, adjust = "tukey"),
 # axenic        indole    14.228 0.658  8   12.710    15.75   b   
 # nonaxenic     indole    18.297 0.658  8   16.779    19.81    c  
           #transformed model is not any different
+
+#####Trying the suggested linear models instead of ANOVAs####
+ba.model <- aov(ba_avg ~ microbe_level*diet_type, data = ba.sal)
+summary(ba.model)
+plot(ba.model)
+
+hist(ba.sal$ba_avg) #not at all normal looking
+
+#trying a linear model
+ba.lm <- lm(ba_avg~microbe_level*diet_type, data=ba.sal)
+hist(resid(ba.lm))
+car::qqPlot(resid(ba.lm)) #bad qq plot, lets try transforming the data
+
+ba.lm.1 <- lm(ba_avg^0.3~microbe_level*diet_type, data=ba.sal)
+hist(resid(ba.lm.1))
+car::qqPlot(resid(ba.lm.1)) #that looks so much better
+
+#running the posthoc analysis on the model
+car::Anova(ba.lm.1, type = "II")
+ba.emmeans <- emmeans::emmeans(ba.lm.1, pairwise ~ c(microbe_level, diet_type),
+                               adjust = "tukey")
+multcomp::cld(ba.emmeans, Letters = letters)
+## fix negative values
+ba.sal$ba_avg_norm <- pmax(ba.sal$ba_avg,0)
+
+## check assumptions
+hist(ba.sal$ba_avg_norm) # not super normal, straight anova would be tricky
+
+## Use an lm instead
+ba.model <- lm(ba_avg_norm ~ microbe_level*diet_type, data = ba.sal)
+hist(resid(ba.model))
+car::qqPlot(resid(ba.model)) # looks terrible
+
+ba.model <- lm((ba_avg_norm)^(1/3) ~ microbe_level*diet_type, data = ba.sal)
+hist(resid(ba.model))
+car::qqPlot(resid(ba.model)) # much better
+
+car::Anova(ba.model, type="II")
+ba.emmeans <- emmeans::emmeans(ba.model, pairwise ~ c(microbe_level,diet_type), adjust="tukey")
+multcomp::cld(ba.emmeans, Letters = letters)
+# keep in mind that emmeans does not easily recognize cube root, so for exact values you may need to back transform
 
 #####unspiked data phytohormone comparisons####
 unspiked.sal <- data.sal %>%
