@@ -79,7 +79,7 @@ ba.model <- aov(ba_avg^.3 ~ microbe_level*diet_type, data = ba.data)
 par(mfrow=c(2,2))
 plot(ba.model)
   #the variance is pretty well distributed, and the normality is not perfect but I think still sufficient
-
+summary(ba.model)
 
 ####whacky fun time with Jared Adam ####
 lm1 <- lm(ba_avg^0.3 ~ microbe_level*diet_type, data = ba.data)
@@ -106,7 +106,7 @@ plot(sa.model)
 sa.model.1 <- aov(sa_avg^.3 ~ microbe_level*diet_type, data = sa.data)
 plot(sa.model.1)  #winner winner chicken dinner! We shall transform by raising to the power of 3/10,
                     #which is the same as cubing it, then finding the 10th root (or finding the 10th root then cubing it)
-
+summary(sa.model.1)
 # sa.model.2 <- aov(sa_avg^.2 ~ microbe_level*diet_type, data = sa.data)
 # plot(sa.model.2)
 
@@ -120,7 +120,7 @@ plot(iaa.model)
 #here's an attempt to imrpove the normality
 iaa.model.1 <- aov(iaa_avg^0.5 ~ microbe_level*diet_type, data = iaa.data)
 plot(iaa.model.1) #I think that's as good as we're going to get, not a real improvement
-
+summary(iaa.model.1)
 
 ##posthoc for our two-way ANOVAs using TukeyHSD, followed by compact letter display
 #first load the packages needed
@@ -254,6 +254,7 @@ summary(unspiked.iaa.model) #not significant, p = 0.365
 unspiked.iaa.model.1 <- aov(iaa_avg^0.2 ~ microbe_level, data = unspiked.iaa.data)
 plot(unspiked.iaa.model.1)  
   #this has slightly better normality, but the homoscedasticity is about the same
+summary(unspiked.iaa.model.1)
 
 ##post hoc tests for these models
 #BA posthoc
